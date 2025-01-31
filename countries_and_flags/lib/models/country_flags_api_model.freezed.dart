@@ -22,7 +22,6 @@ CountryFlagsApiModel _$CountryFlagsApiModelFromJson(Map<String, dynamic> json) {
 mixin _$CountryFlagsApiModel {
   String get png => throw _privateConstructorUsedError;
   String get svg => throw _privateConstructorUsedError;
-  CountryFlagsApiModel get flag => throw _privateConstructorUsedError;
 
   /// Serializes this CountryFlagsApiModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,9 +39,7 @@ abstract class $CountryFlagsApiModelCopyWith<$Res> {
           $Res Function(CountryFlagsApiModel) then) =
       _$CountryFlagsApiModelCopyWithImpl<$Res, CountryFlagsApiModel>;
   @useResult
-  $Res call({String png, String svg, CountryFlagsApiModel flag});
-
-  $CountryFlagsApiModelCopyWith<$Res> get flag;
+  $Res call({String png, String svg});
 }
 
 /// @nodoc
@@ -63,7 +60,6 @@ class _$CountryFlagsApiModelCopyWithImpl<$Res,
   $Res call({
     Object? png = null,
     Object? svg = null,
-    Object? flag = null,
   }) {
     return _then(_value.copyWith(
       png: null == png
@@ -74,21 +70,7 @@ class _$CountryFlagsApiModelCopyWithImpl<$Res,
           ? _value.svg
           : svg // ignore: cast_nullable_to_non_nullable
               as String,
-      flag: null == flag
-          ? _value.flag
-          : flag // ignore: cast_nullable_to_non_nullable
-              as CountryFlagsApiModel,
     ) as $Val);
-  }
-
-  /// Create a copy of CountryFlagsApiModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CountryFlagsApiModelCopyWith<$Res> get flag {
-    return $CountryFlagsApiModelCopyWith<$Res>(_value.flag, (value) {
-      return _then(_value.copyWith(flag: value) as $Val);
-    });
   }
 }
 
@@ -100,10 +82,7 @@ abstract class _$$CountryFlagsApiModelImplCopyWith<$Res>
       __$$CountryFlagsApiModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String png, String svg, CountryFlagsApiModel flag});
-
-  @override
-  $CountryFlagsApiModelCopyWith<$Res> get flag;
+  $Res call({String png, String svg});
 }
 
 /// @nodoc
@@ -121,7 +100,6 @@ class __$$CountryFlagsApiModelImplCopyWithImpl<$Res>
   $Res call({
     Object? png = null,
     Object? svg = null,
-    Object? flag = null,
   }) {
     return _then(_$CountryFlagsApiModelImpl(
       png: null == png
@@ -132,10 +110,6 @@ class __$$CountryFlagsApiModelImplCopyWithImpl<$Res>
           ? _value.svg
           : svg // ignore: cast_nullable_to_non_nullable
               as String,
-      flag: null == flag
-          ? _value.flag
-          : flag // ignore: cast_nullable_to_non_nullable
-              as CountryFlagsApiModel,
     ));
   }
 }
@@ -145,8 +119,7 @@ class __$$CountryFlagsApiModelImplCopyWithImpl<$Res>
 class _$CountryFlagsApiModelImpl
     with DiagnosticableTreeMixin
     implements _CountryFlagsApiModel {
-  const _$CountryFlagsApiModelImpl(
-      {required this.png, required this.svg, required this.flag});
+  const _$CountryFlagsApiModelImpl({required this.png, required this.svg});
 
   factory _$CountryFlagsApiModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CountryFlagsApiModelImplFromJson(json);
@@ -155,12 +128,10 @@ class _$CountryFlagsApiModelImpl
   final String png;
   @override
   final String svg;
-  @override
-  final CountryFlagsApiModel flag;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CountryFlagsApiModel(png: $png, svg: $svg, flag: $flag)';
+    return 'CountryFlagsApiModel(png: $png, svg: $svg)';
   }
 
   @override
@@ -169,8 +140,7 @@ class _$CountryFlagsApiModelImpl
     properties
       ..add(DiagnosticsProperty('type', 'CountryFlagsApiModel'))
       ..add(DiagnosticsProperty('png', png))
-      ..add(DiagnosticsProperty('svg', svg))
-      ..add(DiagnosticsProperty('flag', flag));
+      ..add(DiagnosticsProperty('svg', svg));
   }
 
   @override
@@ -179,13 +149,12 @@ class _$CountryFlagsApiModelImpl
         (other.runtimeType == runtimeType &&
             other is _$CountryFlagsApiModelImpl &&
             (identical(other.png, png) || other.png == png) &&
-            (identical(other.svg, svg) || other.svg == svg) &&
-            (identical(other.flag, flag) || other.flag == flag));
+            (identical(other.svg, svg) || other.svg == svg));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, png, svg, flag);
+  int get hashCode => Object.hash(runtimeType, png, svg);
 
   /// Create a copy of CountryFlagsApiModel
   /// with the given fields replaced by the non-null parameter values.
@@ -208,8 +177,7 @@ class _$CountryFlagsApiModelImpl
 abstract class _CountryFlagsApiModel implements CountryFlagsApiModel {
   const factory _CountryFlagsApiModel(
       {required final String png,
-      required final String svg,
-      required final CountryFlagsApiModel flag}) = _$CountryFlagsApiModelImpl;
+      required final String svg}) = _$CountryFlagsApiModelImpl;
 
   factory _CountryFlagsApiModel.fromJson(Map<String, dynamic> json) =
       _$CountryFlagsApiModelImpl.fromJson;
@@ -218,8 +186,6 @@ abstract class _CountryFlagsApiModel implements CountryFlagsApiModel {
   String get png;
   @override
   String get svg;
-  @override
-  CountryFlagsApiModel get flag;
 
   /// Create a copy of CountryFlagsApiModel
   /// with the given fields replaced by the non-null parameter values.

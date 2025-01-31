@@ -11,7 +11,6 @@ _$CountryNameApiModelImpl _$$CountryNameApiModelImplFromJson(
     _$CountryNameApiModelImpl(
       common: json['common'] as String,
       official: json['official'] as String,
-      name: CountryNameApiModel.fromJson(json['name'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$CountryNameApiModelImplToJson(
@@ -19,5 +18,4 @@ Map<String, dynamic> _$$CountryNameApiModelImplToJson(
     <String, dynamic>{
       'common': instance.common,
       'official': instance.official,
-      'name': instance.name,
     };

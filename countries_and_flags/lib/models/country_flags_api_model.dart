@@ -8,7 +8,7 @@ part 'country_flags_api_model.g.dart';
 class CountryFlagsApiModel with _$CountryFlagsApiModel{
   const factory CountryFlagsApiModel({
     required String png,
-    required String svg, required CountryFlagsApiModel flag,
+    required String svg,
   }) = _CountryFlagsApiModel;
 factory CountryFlagsApiModel.fromJson(Map<String, dynamic> json)
 => _$CountryFlagsApiModelFromJson(json);

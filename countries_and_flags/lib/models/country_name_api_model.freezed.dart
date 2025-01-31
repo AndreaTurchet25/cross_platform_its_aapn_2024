@@ -22,7 +22,6 @@ CountryNameApiModel _$CountryNameApiModelFromJson(Map<String, dynamic> json) {
 mixin _$CountryNameApiModel {
   String get common => throw _privateConstructorUsedError;
   String get official => throw _privateConstructorUsedError;
-  CountryNameApiModel get name => throw _privateConstructorUsedError;
 
   /// Serializes this CountryNameApiModel to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,9 +39,7 @@ abstract class $CountryNameApiModelCopyWith<$Res> {
           CountryNameApiModel value, $Res Function(CountryNameApiModel) then) =
       _$CountryNameApiModelCopyWithImpl<$Res, CountryNameApiModel>;
   @useResult
-  $Res call({String common, String official, CountryNameApiModel name});
-
-  $CountryNameApiModelCopyWith<$Res> get name;
+  $Res call({String common, String official});
 }
 
 /// @nodoc
@@ -62,7 +59,6 @@ class _$CountryNameApiModelCopyWithImpl<$Res, $Val extends CountryNameApiModel>
   $Res call({
     Object? common = null,
     Object? official = null,
-    Object? name = null,
   }) {
     return _then(_value.copyWith(
       common: null == common
@@ -73,21 +69,7 @@ class _$CountryNameApiModelCopyWithImpl<$Res, $Val extends CountryNameApiModel>
           ? _value.official
           : official // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as CountryNameApiModel,
     ) as $Val);
-  }
-
-  /// Create a copy of CountryNameApiModel
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $CountryNameApiModelCopyWith<$Res> get name {
-    return $CountryNameApiModelCopyWith<$Res>(_value.name, (value) {
-      return _then(_value.copyWith(name: value) as $Val);
-    });
   }
 }
 
@@ -99,10 +81,7 @@ abstract class _$$CountryNameApiModelImplCopyWith<$Res>
       __$$CountryNameApiModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String common, String official, CountryNameApiModel name});
-
-  @override
-  $CountryNameApiModelCopyWith<$Res> get name;
+  $Res call({String common, String official});
 }
 
 /// @nodoc
@@ -120,7 +99,6 @@ class __$$CountryNameApiModelImplCopyWithImpl<$Res>
   $Res call({
     Object? common = null,
     Object? official = null,
-    Object? name = null,
   }) {
     return _then(_$CountryNameApiModelImpl(
       common: null == common
@@ -131,10 +109,6 @@ class __$$CountryNameApiModelImplCopyWithImpl<$Res>
           ? _value.official
           : official // ignore: cast_nullable_to_non_nullable
               as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as CountryNameApiModel,
     ));
   }
 }
@@ -145,7 +119,7 @@ class _$CountryNameApiModelImpl
     with DiagnosticableTreeMixin
     implements _CountryNameApiModel {
   const _$CountryNameApiModelImpl(
-      {required this.common, required this.official, required this.name});
+      {required this.common, required this.official});
 
   factory _$CountryNameApiModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$CountryNameApiModelImplFromJson(json);
@@ -154,12 +128,10 @@ class _$CountryNameApiModelImpl
   final String common;
   @override
   final String official;
-  @override
-  final CountryNameApiModel name;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'CountryNameApiModel(common: $common, official: $official, name: $name)';
+    return 'CountryNameApiModel(common: $common, official: $official)';
   }
 
   @override
@@ -168,8 +140,7 @@ class _$CountryNameApiModelImpl
     properties
       ..add(DiagnosticsProperty('type', 'CountryNameApiModel'))
       ..add(DiagnosticsProperty('common', common))
-      ..add(DiagnosticsProperty('official', official))
-      ..add(DiagnosticsProperty('name', name));
+      ..add(DiagnosticsProperty('official', official));
   }
 
   @override
@@ -179,13 +150,12 @@ class _$CountryNameApiModelImpl
             other is _$CountryNameApiModelImpl &&
             (identical(other.common, common) || other.common == common) &&
             (identical(other.official, official) ||
-                other.official == official) &&
-            (identical(other.name, name) || other.name == name));
+                other.official == official));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, common, official, name);
+  int get hashCode => Object.hash(runtimeType, common, official);
 
   /// Create a copy of CountryNameApiModel
   /// with the given fields replaced by the non-null parameter values.
@@ -207,8 +177,7 @@ class _$CountryNameApiModelImpl
 abstract class _CountryNameApiModel implements CountryNameApiModel {
   const factory _CountryNameApiModel(
       {required final String common,
-      required final String official,
-      required final CountryNameApiModel name}) = _$CountryNameApiModelImpl;
+      required final String official}) = _$CountryNameApiModelImpl;
 
   factory _CountryNameApiModel.fromJson(Map<String, dynamic> json) =
       _$CountryNameApiModelImpl.fromJson;
@@ -217,8 +186,6 @@ abstract class _CountryNameApiModel implements CountryNameApiModel {
   String get common;
   @override
   String get official;
-  @override
-  CountryNameApiModel get name;
 
   /// Create a copy of CountryNameApiModel
   /// with the given fields replaced by the non-null parameter values.

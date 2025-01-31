@@ -1,14 +1,14 @@
 import 'package:countries_and_flags/api/http_client_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:countries_and_flags/models/country_api_model.dart'; // Assicurati di avere il modello corretto
+import 'package:countries_and_flags/models/country_api_model.dart'; 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'country_api.g.dart';
 
 @riverpod
 CountryApi countryApi(CountryApiRef ref) {
-  final client = ref.watch(httpClientProvider); // Usa httpClientProvider per l'istanza di Dio
+  final client = ref.watch(httpClientProvider); 
   return CountryApi(client);
 }
 

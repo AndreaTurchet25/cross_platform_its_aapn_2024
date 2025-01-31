@@ -11,7 +11,6 @@ _$CountryFlagsApiModelImpl _$$CountryFlagsApiModelImplFromJson(
     _$CountryFlagsApiModelImpl(
       png: json['png'] as String,
       svg: json['svg'] as String,
-      flag: CountryFlagsApiModel.fromJson(json['flag'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$CountryFlagsApiModelImplToJson(
@@ -19,5 +18,4 @@ Map<String, dynamic> _$$CountryFlagsApiModelImplToJson(
     <String, dynamic>{
       'png': instance.png,
       'svg': instance.svg,
-      'flag': instance.flag,
     };
